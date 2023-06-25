@@ -24,7 +24,7 @@ function App() {
   )
  },[])
 
- /*удаление статьи по клику */
+ /*удаление вопроса по клику */
 const clickDel : MouseEventHandler = (event)=> {
   let atrId=event.currentTarget.getAttribute('data-id');
   setArt([...del(atrId,art)]);
@@ -41,7 +41,7 @@ const clickDel : MouseEventHandler = (event)=> {
       return arr1;
  }
 
-/*строки каждой статьи */
+/*строки каждого вопроса */
 function ArticleItem({ category, question ,type,id }: ArticleProp): JSX.Element 
 {
     return (
@@ -59,7 +59,7 @@ function ArticleItem({ category, question ,type,id }: ArticleProp): JSX.Element
     )
   }
 
-/*все статьи */
+/*все вопросы */
 function article(child: ArticleProp[] ): JSX.Element | JSX.Element[] 
 {
     const newsItems : JSX.Element[] =[];
