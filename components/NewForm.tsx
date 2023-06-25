@@ -20,7 +20,7 @@ export default function FormAddNews(showForm: boolean ,
                           count:number): JSX.Element 
 {
 
-    /*добавление новой статьи по клику */     
+    /*добавление нового вопроса по клику */     
     const addNewBut: MouseEventHandler = (event) => {
         const obj=setNewObj();
         funcAddNewNews([...oldArt,obj]);
@@ -32,7 +32,7 @@ export default function FormAddNews(showForm: boolean ,
 
     }  
 
-    /*формирование нового объекта для списка статей */
+    /*формирование нового объекта для списка вопросов */
     function setNewObj(): ArticleProp{
       let newObj:ArticleProp
         newObj={
@@ -51,7 +51,7 @@ export default function FormAddNews(showForm: boolean ,
       return newObj;
     }  
 
-/*поля для ввода данных для новой статьи */ 
+/*поля для ввода данных для нового вопроса */ 
     const memoInputTheme = inputValues('Название темы',newTitle,funcChangeNewTitle);
     const memoInputQuest = inputValues('Вопрос',newQuestion,funcChangeNewQuest);
     const memoInputType = inputValues('Тип',newType,funcChangeNewType);
